@@ -1,0 +1,17 @@
+
+// script.js
+var messageInput = document.getElementById("message-input");
+var messageContainer = document.getElementById("message-container");
+var sendButton = document.getElementById("send-button");
+
+sendButton.addEventListener("click", function() {
+  var message = messageInput.value;
+  
+  // Crea un nuevo elemento de mensaje y agrega el texto ingresado
+  var newMessage = document.createElement("div");
+  newMessage.innerHTML = message;
+  messageContainer.appendChild(newMessage);
+  
+  // Limpia el campo de entrada de mensajes
+  messageInput.value = "";
+});
